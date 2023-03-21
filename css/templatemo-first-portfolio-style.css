@@ -852,7 +852,7 @@ font-weight: var(--font-weight-bold);
   background: var(--white-color);
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
-  padding: 60px 30px 30px 30px;
+  padding: 15px 30px 30px 30px;
   height: 100%;
 }
 
@@ -864,6 +864,79 @@ font-weight: var(--font-weight-bold);
 .contact-form {
   margin-left: 10px;
 }
+
+.smedia{
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
+ 
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: -10px;
+  padding-bottom: 20px;
+}
+
+.discon, .instacon, .gitcon {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-large);
+  font-size: var(--copyright-font-size);
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 2px 5px 2px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.discon{
+  color: #1da1f2;
+  border-color:  #1da1f2;
+}
+
+.instacon{
+  color: #e1306c;
+  border-color: #e1306c;
+}
+
+.gitcon{
+  color: #6f42c1;
+  border-color: #6f42c1;;
+}
+
+.smedia li:hover .discon, .smedia li:hover .instacon, .smedia li:hover .gitcon{
+  background: var(--secondary-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+.smedia li:hover span{
+  color: var(--secondary-color);
+}
+
+.connect span {
+  font-weight: bold;
+}
+
+.connect:nth-child(1) span{
+  color: #1da1f2;
+  border-color:  #1da1f2;
+}
+
+.connect:nth-child(2) span{
+  color: #e1306c;
+  border-color: #e1306c;
+}
+
+.connect:nth-child(3) span{
+  color: #6f42c1;
+  border-color: #6f42c1;
+}
+
 
 
 /*---------------------------------------
