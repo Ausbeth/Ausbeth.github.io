@@ -1277,9 +1277,9 @@ http://www.freshdesignweb.com/fashion-responsive-slider-tutorial.html
 */
 /* Slider
 /*-----------------------------------------------------------------------------------*/
-.slider_container{ width:920px; margin:auto; clear:both; background:url(/Users/Ausbeth/Ausbeth.github.io/images/shadow_top.png) no-repeat top center; padding:30px 0 0 0;}
+.slider_container{ width:920px; margin:auto; clear:both; background:url(images/shadow_top.png) no-repeat top center; padding:30px 0 0 0;}
 .flex-caption{ position: absolute; right:11px; bottom:20px;}
-.caption_title_line{ width:450px; height:75px; padding:5px 15px 10px 15px;background:url(/Users/Ausbeth/Ausbeth.github.io/images/slider_caption_bg.png) repeat;color: #303030;}
+.caption_title_line{ width:450px; height:75px; padding:5px 15px 10px 15px;background:url(images/slider_caption_bg.png) repeat;color: #303030;}
 .flex-caption h2{ color:#303030;font-size:20px; padding:5px 0 5px 0; margin:0px;font-family: 'Ovo', serif;}
 
 .flex-container a:active,
@@ -1290,7 +1290,7 @@ http://www.freshdesignweb.com/fashion-responsive-slider-tutorial.html
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {width: 100%; margin: 0; padding: 0 0 30px 0;background:url(/Users/Ausbeth/Ausbeth.github.io/images/shadow_bottom.png) no-repeat center bottom;}
+.flexslider {width: 100%; margin: 0; padding: 0 0 30px 0;background:url(images/shadow_bottom.png) no-repeat center bottom;}
 .flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {max-width: 100%; display: block; border:7px var(--secondary-color) solid;}
 .flex-pauseplay span {text-transform: capitalize;}
@@ -1305,10 +1305,10 @@ html[xmlns] .slides {display: block;}
 
 /* Direction Nav */
 .flex-direction-nav li a {width:45px; height:42px; margin:0; display: block; position: absolute; right:6px; cursor: pointer; text-indent: -9999px;}
-.flex-direction-nav li a.next {background:url(/Users/Ausbeth/Ausbeth.github.io/images/next.png) no-repeat center; bottom:92px;}
-.flex-direction-nav li a.prev {background:url(/Users/Ausbeth/Ausbeth.github.io/images/prev.png) no-repeat center;bottom:36.5px;}
-.flex-direction-nav li a.next:hover {background:url(/Users/Ausbeth/Ausbeth.github.io/images/next_a.png) no-repeat center;}
-.flex-direction-nav li a.prev:hover {background:url(/Users/Ausbeth/Ausbeth.github.io/images/prev_a.png) no-repeat center;}
+.flex-direction-nav li a.next {background:url(images/next.png) no-repeat center; bottom:92px;}
+.flex-direction-nav li a.prev {background:url(images/prev.png) no-repeat center;bottom:36.5px;}
+.flex-direction-nav li a.next:hover {background:url(images/next_a.png) no-repeat center;}
+.flex-direction-nav li a.prev:hover {background:url(images/prev_a.png) no-repeat center;}
 .flex-direction-nav li a.disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Control Nav */
@@ -1326,8 +1326,8 @@ html[xmlns] .slides {display: block;}
 .slider_container{ width:90%; margin:0 0 0 2%; clear:both; background:none; padding:30px 0 0 0;}
 .flexslider {width: 100%; margin: 0; padding:0 0 30px 0;background:none;}
 .flex-direction-nav li a {width:25px; height:22px; margin:0; display: block; position: absolute; right:6px; cursor: pointer; text-indent: -9999px;}
-.flex-direction-nav li a.next {background:url(/Users/Ausbeth/Ausbeth.github.io/images/next.png) no-repeat center; bottom:62px;}
-.flex-direction-nav li a.prev {background:url(/Users/Ausbeth/Ausbeth.github.io/images/prev.png) no-repeat center;bottom:36.5px;}
+.flex-direction-nav li a.next {background:url(images/next.png) no-repeat center; bottom:62px;}
+.flex-direction-nav li a.prev {background:url(images/prev.png) no-repeat center;bottom:36.5px;}
 .flex-caption { display:none;}
 }
 
