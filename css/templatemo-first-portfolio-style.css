@@ -551,6 +551,7 @@ strong {
   border-radius: var(--border-radius-medium);
   position: relative;
   overflow: hidden;
+  
 }
 
 .profile-title {
@@ -1321,7 +1322,6 @@ font-weight: var(--font-weight-bold);
     font-size: 20px;
   }
 
-
   .custom-btn,
   .navbar .custom-btn {
     font-size: 13px;
@@ -1343,7 +1343,45 @@ font-weight: var(--font-weight-bold);
   .hero-image {
     min-width: inherit;
   }
+
+  .services-icon-ed {
+    width: 45%;
+    height: 25%;
+  }
+  
+  .services-icon-sk {
+    width: 45%;
+    height: 33%;
+  }
+  
+  .services-icon-pe {
+    width: 45%;
+    height: 47%;
+  }
 }
+
+@media screen and (max-width: 370px) {
+  .profile-body p{
+    font-size: 17px;
+  }
+
+  .services-icon-ed {
+    width: 45%;
+    height: 22%;
+  }
+
+  .services-icon-sk {
+    width: 45%;
+    height: 29%;
+  }
+
+  .services-icon-pe {
+    width: 45%;
+    height: 40%;
+  }
+
+}
+
 
 /* Slider
 http://www.freshdesignweb.com/fashion-responsive-slider-tutorial.html
