@@ -150,11 +150,13 @@ strong {
   width: 160px;
   height: 160px;
   object-fit: cover;
+  
 }
 
 .avatar-image-large {
   width: 90.4px;
   height: 90.4px;
+  object-position: center 15%;
 }
 
 
@@ -197,9 +199,8 @@ strong {
   animation: spinner .9s linear infinite;
 }
 
-@-webkit-@keyframes spinner {
-  to {transform: rotate(360deg);
-  }
+@-webkit-keyframes spinner {
+  to {transform: rotate(360deg);}
 }
 
 @keyframes spinner {
@@ -577,42 +578,89 @@ strong {
 
 
 /*---------------------------------------
-  FORAGE              
+  SKILLS              
 -----------------------------------------*/
-.forage-item-height {
+.skills-item-height {
 	height: 120px;
 }
 
-.forage-image {
+.skills-image {
   display: block;
   max-width: 100px;
   margin: auto;
   transition: all ease 0.2s;
 }
 
-.forage-image:hover {
+.skills-image:hover {
   transform: scale(1.3);
 }
 
-
 /*---------------------------------------
-  RESUME              
+  PROJECTS              
 -----------------------------------------*/
-.resume,
+.projects,
 .featured {
   background: var(--section-bg-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
-.resume-thumb {
+.projects-thumb {
   background: var(--white-color);
+  border: 10px solid var(--section-bg-color);
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 40px;
+  transition: all ease 0.5s;
+}
+
+.projects-thumb:hover .projects-image,
+.projects-thumb:focus .projects-image {
+  transform: rotate(0) translateY(0);
+}
+
+.projects-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.projects-image {
+  border-radius: var(--border-radius-medium);
+  display: block;
+  width: 100%;
+  transform: rotate(10deg) translateY(80px);
+  transition: all ease 0.5s;
+}
+
+.projects-title {
+  margin-bottom: 20px;
+}
+
+.projects-tag {
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-medium);
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+
+/*---------------------------------------
+  RESUME              
+-----------------------------------------*/
+
+.resume-thumb {
+  background: var(--section-bg-color);
   border: 2px solid transparent;
   border-radius: var(--border-radius-medium);
   position: relative;
   overflow: hidden;
   margin-bottom: 24px;
-  padding: 40px 40px 240px 40px;
+  padding: 40px 40px 280px 40px; /* Increased from 240px */
   transition: all 0.5s;
 }
 
@@ -627,62 +675,37 @@ strong {
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
-.resume-thumb:hover .resume-icon-ed{
+.resume-thumb:hover .resume-icon-ed,
+.resume-thumb:hover .resume-icon-sk,
+.resume-thumb:hover .resume-icon-pe {
   background: var(--secondary-color);
   border-color: var(--secondary-color);
   color: var(--white-color);
 }
 
-.resume-thumb:hover .resume-icon-sk{
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: var(--white-color);
-}
-
-.resume-thumb:hover .resume-icon-pe{
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
-  color: var(--white-color);
-}
-
-.resume-icon-ed {
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-small);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 28%;
-  transform: rotate(-35deg) translateY(55px);
-  transition: all ease 0.5s;
-}
-
-.resume-icon-sk {
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-small);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 34%;
-  transform: rotate(-35deg) translateY(55px);
-  transition: all ease 0.5s;
-}
-
+.resume-icon-ed,
+.resume-icon-sk,
 .resume-icon-pe {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-small);
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50%;
-  height: 45%;
-  transform: rotate(-35deg) translateY(55px);
+  width: 40%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-35deg) translateY(45px);
   transition: all ease 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--section-bg-color);
+  z-index: 0;
+  overflow: hidden;
 }
 
 .resume-icon {
-  font-size: 90px;
+  font-size: 70px;
   position: relative;
   bottom: 15px;
 }
@@ -733,7 +756,7 @@ strong {
 }
 
 .skills-list li {
-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .resume-thumb:hover .skills-list li {
@@ -758,56 +781,6 @@ font-weight: var(--font-weight-bold);
 
 .cbody{
 padding: 10px;
-}
-
-/*---------------------------------------
-  PROJECTS              
------------------------------------------*/
-.projects-thumb {
-  background: var(--section-bg-color);
-  border: 2px solid var(--white-color);
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  overflow: hidden;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  padding: 40px;
-  transition: all ease 0.5s;
-}
-
-.projects-thumb:hover {
-  border-color: var(--secondary-color);
-}
-
-.projects-thumb:hover .projects-image,
-.projects-thumb:focus .projects-image {
-  transform: rotate(0) translateY(0);
-}
-
-.projects-thumb {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.projects-image {
-  border-radius: var(--border-radius-medium);
-  display: block;
-  width: 100%;
-  transform: rotate(10deg) translateY(80px);
-  transition: all ease 0.5s;
-}
-
-.projects-title {
-  margin-bottom: 20px;
-}
-
-.projects-tag {
-  font-size: var(--menu-font-size);
-  font-weight: var(--font-weight-medium);
-  color: var(--secondary-color);
-  text-transform: uppercase;
-  margin-bottom: 5px;
 }
 
 
@@ -1136,7 +1109,7 @@ html[xmlns] .slides {display: block;}
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -30px; text-align: center;}
-.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1;}
 .flex-control-nav li:first-child {margin: 0;}
 .flex-control-nav li a {width: 13px; height: 13px; display: block; cursor: pointer; text-indent: -9999px;}
 .flex-control-nav li a:hover {background-position: 0 -13px;}
@@ -1322,29 +1295,19 @@ iframe {
     font-size: 42px;
   }
 
-  .resume-thumb-up {
-    bottom: 0;
-    margin-bottom: 32px;
+  .resume-icon {
+    font-size: 50px;
+  }
+
+  .resume-icon-ed,
+  .resume-icon-sk,
+  .resume-icon-pe {
+    width: 30%;
+    transform: rotate(-20deg) translateY(35px);
   }
 
   .resume-thumb {
-    margin-bottom: 32px;
-    padding-bottom: 270px;
-  }
-
-  .resume-icon-ed {
-    width: 45%;
-    height: 32%;
-  }
-
-  .resume-icon-sk {
-    width: 45%;
-    height: 33%;
-  }
-
-  .resume-icon-pe {
-    width: 45%;
-    height: 50%;
+    padding-bottom: 240px;
   }
 
   .resume .col-lg-10 .row .col-lg-6:last-child,
@@ -1375,6 +1338,23 @@ iframe {
     height: auto;
     margin: 3;
   }
+
+  .resume-icon {
+    font-size: 50px;
+  }
+
+  .resume-icon-ed,
+  .resume-icon-sk,
+  .resume-icon-pe {
+    width: 30%;
+    transform: rotate(-20deg) translateY(35px);
+  }
+
+  .resume-thumb {
+    padding-bottom: 240px;
+    margin-top: 50px;
+  }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -1427,19 +1407,19 @@ iframe {
     min-width: inherit;
   }
 
-  .resume-icon-ed {
-    width: 45%;
-    height: 25%;
+ .resume-icon {
+    font-size: 45px;
   }
-  
-  .resume-icon-sk {
-    width: 45%;
-    height: 33%;
-  }
-  
+
+  .resume-icon-ed,
+  .resume-icon-sk,
   .resume-icon-pe {
-    width: 45%;
-    height: 47%;
+    width: 28%;
+    transform: rotate(-15deg) translateY(30px);
+  }
+
+  .resume-thumb {
+    padding-bottom: 220px;
   }
 }
 
@@ -1448,19 +1428,19 @@ iframe {
     font-size: 17px;
   }
 
-  .resume-icon-ed {
-    width: 45%;
-    height: 22%;
+  .resume-icon {
+    font-size: 40px;
   }
 
-  .resume-icon-sk {
-    width: 45%;
-    height: 29%;
-  }
-
+  .resume-icon-ed,
+  .resume-icon-sk,
   .resume-icon-pe {
-    width: 45%;
-    height: 40%;
+    width: 26%;
+    transform: rotate(-10deg) translateY(28px);
+  }
+
+  .resume-thumb {
+    padding-bottom: 210px;
   }
 
 }
